@@ -2,11 +2,11 @@
 #define TESTDBMANAGER_H
 
 #include <QObject>
+#include <QTest>
 
 class TestDBManager : public QObject
 {
     Q_OBJECT
-
 public:
     TestDBManager(QObject *parent=0);
     ~TestDBManager();
@@ -30,5 +30,7 @@ private slots:
 
     void cleanup();
 };
+
+QTEST_MAIN(TestDBManager)
 
 #endif // TESTDBMANAGER_H

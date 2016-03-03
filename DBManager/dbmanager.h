@@ -1,28 +1,24 @@
 #ifndef DBMANAGER_H
 #define DBMANAGER_H
 
-#include "taskmanager_global.h"
+#include "dbmanager_global.h"
 #include <QObject>
-#include <QtSql/QSqlDatabase>
 #include <QMap>
 #include <QStringList>
 #include <QList>
 #include <QVariant>
 
-class TASKMANAGER_EXPORT DBManager : public QObject
+class QSqlDatabase;
+
+class DBMANAGER_EXPORT DBManager : public QObject
 {
 public:
-    
+	DBManager(const QString& dbType,QObject *parent = 0);
     ~DBManager();
-
-    static DBManager* getInstance(){
-        static DBManager dbManager;
-        return &dbManager;
-    }
 
     inline bool isOpened() const;
 
-    bool open(const QString& user,const QString& psw,const QString& address = "localhost",const QString& dbName = "orcl");
+    bool open(const QString& user,const QString& psw,int port,const QString& address = "localhost",const QString& dbName = "orcl");
 
     bool execSql(const QString& sql);
 
@@ -37,10 +33,7 @@ public:
     void close();
 
 private:
-    DBManager(QObject *parent = 0);
-
-private:
-    QSqlDatabase mDB;
+    QSqlDatabase* mDB;
 };
 
 #endif // DBMANAGER_H
