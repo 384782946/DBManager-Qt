@@ -1,2 +1,2 @@
 # DBManager-Qt
-A simple wrapper of qt sql module
+A simple wrapper of qt sql
