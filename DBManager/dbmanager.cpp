@@ -23,7 +23,7 @@ bool DBManager::isOpened() const
     return mDB->isOpen();
 }
 
-bool DBManager::open(const QString& user, const QString& psw, int port, const QString& address/* = "localhost"*/, const QString& dbName/* = "orcl" */)
+bool DBManager::open(const QString& dbName,const QString& user, const QString& psw, const QString& address,int port)
 {
     if(!mDB->isOpen()){
 		mDB->setHostName(address);
@@ -47,14 +47,16 @@ void DBManager::close()
 
 bool DBManager::execSql( const QString& sql )
 {
-	if (!isOpened()) return false;
+	if (!isOpened()) 
+		return false;
     QSqlQuery query;
     return query.exec(sql);
 }
 
 bool DBManager::update( const QString& table,const QMap<QString,QVariant>& values ,const QString& _where)
 {
-	if (!isOpened()) return false;
+	if (!isOpened()) 
+		return false;
 
     QSqlQuery query;
     QString datas;
@@ -80,7 +82,8 @@ bool DBManager::update( const QString& table,const QMap<QString,QVariant>& value
 
 bool DBManager::remove( const QString& table,const QString& _where )
 {
-	if (!isOpened()) return false;
+	if (!isOpened()) 
+		return false;
 
     QSqlQuery query;
     QString sql = QString("DELETE FROM %1 WHERE %2").arg(table).arg(_where);
@@ -89,7 +92,8 @@ bool DBManager::remove( const QString& table,const QString& _where )
 
 bool DBManager::add( const QString& table,const QMap<QString,QVariant>& values )
 {
-	if (!isOpened()) return false;
+	if (!isOpened()) 
+		return false;
 
     QSqlQuery query;
     QString columns,datas;
@@ -117,7 +121,8 @@ bool DBManager::add( const QString& table,const QMap<QString,QVariant>& values )
 QList<QList<QVariant>> DBManager::query( const QString& table,QStringList& columns/*=QStringList()*/,const QString& _where )
 {
     QList<QList<QVariant>> rets;
-	if (!isOpened()) return rets;
+	if (!isOpened()) 
+		return rets;
 
     QSqlQuery query;
     QString _columns;

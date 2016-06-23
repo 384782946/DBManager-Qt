@@ -1,4 +1,4 @@
-﻿生成启动时间为 2016/3/3 18:47:59。
+﻿生成启动时间为 2016/6/23 23:18:07。
      1>项目“D:\Projects\VS2013\DBManager-Qt\test\test.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I. /ID:\Qt\Qt5.5.1\5.5\msvc2013\include /I.\GeneratedFiles\Debug /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtCore /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtTest /I"D:\Projects\VS2013\DBManager-Qt\DBManager" /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtSql /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_TESTLIB_LIB /D QT_SQL_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TestDBManager.cpp
@@ -11,7 +11,7 @@
             正在创建库 D:\Projects\VS2013\DBManager-Qt\Win32\Debug\test.lib 和对象 D:\Projects\VS2013\DBManager-Qt\Win32\Debug\test.exp
      1>TestDBManager.obj : warning LNK4217: 本地定义的符号 ??0DBManager@@QAE@ABVQString@@PAVQObject@@@Z (public: __thiscall DBManager::DBManager(class QString const &,class QObject *)) 在函数 "public: __thiscall TestDBManager::TestDBManager(class QObject *)" (??0TestDBManager@@QAE@PAVQObject@@@Z) 中导入
      1>TestDBManager.obj : warning LNK4217: 本地定义的符号 ??1DBManager@@UAE@XZ (public: virtual __thiscall DBManager::~DBManager(void)) 在函数 "public: virtual void * __thiscall DBManager::`scalar deleting destructor'(unsigned int)" (??_GDBManager@@UAEPAXI@Z) 中导入
-     1>TestDBManager.obj : warning LNK4217: 本地定义的符号 ?open@DBManager@@QAE_NABVQString@@0H00@Z (public: bool __thiscall DBManager::open(class QString const &,class QString const &,int,class QString const &,class QString const &)) 在函数 "private: void __thiscall TestDBManager::initTestCase(void)" (?initTestCase@TestDBManager@@AAEXXZ) 中导入
+     1>TestDBManager.obj : warning LNK4217: 本地定义的符号 ?open@DBManager@@QAE_NABVQString@@000H@Z (public: bool __thiscall DBManager::open(class QString const &,class QString const &,class QString const &,class QString const &,int)) 在函数 "private: void __thiscall TestDBManager::initTestCase(void)" (?initTestCase@TestDBManager@@AAEXXZ) 中导入
      1>TestDBManager.obj : warning LNK4217: 本地定义的符号 ?execSql@DBManager@@QAE_NABVQString@@@Z (public: bool __thiscall DBManager::execSql(class QString const &)) 在函数 "private: void __thiscall TestDBManager::test_create(void)" (?test_create@TestDBManager@@AAEXXZ) 中导入
      1>TestDBManager.obj : warning LNK4217: 本地定义的符号 ?update@DBManager@@QAE_NABVQString@@ABV?$QMap@VQString@@VQVariant@@@@0@Z (public: bool __thiscall DBManager::update(class QString const &,class QMap<class QString,class QVariant> const &,class QString const &)) 在函数 "private: void __thiscall TestDBManager::test_update(void)" (?test_update@TestDBManager@@AAEXXZ) 中导入
      1>TestDBManager.obj : warning LNK4217: 本地定义的符号 ?remove@DBManager@@QAE_NABVQString@@0@Z (public: bool __thiscall DBManager::remove(class QString const &,class QString const &)) 在函数 "private: void __thiscall TestDBManager::test_remove(void)" (?test_remove@TestDBManager@@AAEXXZ) 中导入
@@ -23,4 +23,4 @@
 
 生成成功。
 
-已用时间 00:00:02.00
+已用时间 00:00:01.78

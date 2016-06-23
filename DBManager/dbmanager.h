@@ -18,7 +18,7 @@ public:
 
     inline bool isOpened() const;
 
-    bool open(const QString& user,const QString& psw,int port,const QString& address = "localhost",const QString& dbName = "orcl");
+	bool open(const QString& dbName,const QString& user, const QString& psw, const QString& address,int port);
 
     bool execSql(const QString& sql);
 

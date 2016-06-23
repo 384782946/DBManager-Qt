@@ -61,7 +61,7 @@ void TestDBManager::test_remove()
 
 void TestDBManager::initTestCase()
 {
-	if (g_DBManager->open("scott", "zxj",1521)){
+	if (g_DBManager->open("orcl","scott", "zxj","localhost",1521)){
         qDebug()<<"database open success.";
     }else{
         qDebug()<<"database open fail.";

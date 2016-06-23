@@ -1,4 +1,4 @@
-﻿生成启动时间为 2016/3/3 18:47:38。
+﻿生成启动时间为 2016/6/23 23:20:32。
      1>项目“D:\Projects\VS2013\DBManager-Qt\DBManager\DBManager.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\Qt5.5.1\5.5\msvc2013\include /I.\GeneratedFiles\Debug /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtCore /ID:\Qt\Qt5.5.1\5.5\msvc2013\include\QtSql /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D DBMANAGER_LIB /D QT_CORE_LIB /D QT_SQL_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt dbmanager.cpp
@@ -11,4 +11,4 @@
 
 生成成功。
 
-已用时间 00:00:01.17
+已用时间 00:00:01.12
