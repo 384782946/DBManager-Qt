@@ -1,3 +1,4 @@
 *.obj
 *.sdf
 win32/
+/*.suo
