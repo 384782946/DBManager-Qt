@@ -2,3 +2,8 @@
 *.sdf
 win32/
 /*.suo
+/lib
+/Debug
+/Release
+/DBManager/Release
+/DBManager/Debug
