@@ -7,7 +7,7 @@ TARGET = test
 QT += core sql
 CONFIG += qtestlib console
 DEFINES += QT_DLL QT_TESTLIB_LIB QT_SQL_LIB
-INCLUDEPATH += $$PWD\..\DBManager
+INCLUDEPATH += $$PWD/../DBManager
 
 DEPENDPATH += .
 

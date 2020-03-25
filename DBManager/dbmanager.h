@@ -41,7 +41,7 @@ public:
     bool remove(const QString& table,const QString& where = "");
 
     //查
-    QList<QVariantList> query(const QString& table,/*[Output]*/QStringList& columns=QStringList(),const QString& where = "");
+    QList<QVariantList> query(const QString& table,/*[Output]*/QStringList& columns,const QString& where = "");
 
     //改
     bool update(const QString& table,const QMap<QString,QVariant>& values,const QString& where = "");
