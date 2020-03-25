@@ -1,4 +1,4 @@
-#include "TestDBManager.h"
+ï»¿#include "TestDBManager.h"
 #include "DBManager.h"
 #include <QDebug>
 #include <QVariant>
@@ -8,7 +8,7 @@ DBManager* g_DBManager = nullptr;
 TestDBManager::TestDBManager(QObject *parent)
     : QObject(parent)
 {
-	g_DBManager = new DBManager("QOCI");
+    g_DBManager = new DBManager("QSQLITE");
 }
 
 TestDBManager::~TestDBManager()
@@ -18,18 +18,18 @@ TestDBManager::~TestDBManager()
 
 void TestDBManager::test_create()
 {
-    //²âÊÔ
-    //É¾³ı±í
+    //æµ‹è¯•
+    //åˆ é™¤è¡¨
 	Q_ASSERT_X(g_DBManager->execSql("DROP TABLE test"), "drop table", "faild");
 
-    //´´½¨±í
+    //åˆ›å»ºè¡¨
 	Q_ASSERT_X(g_DBManager->execSql("CREATE TABLE test(id NUMBER(2),name VARCHAR2(20),info VARCHAR2(20))"), "create table", "faild");
    
 }
 
 void TestDBManager::test_add()
 {
-    //²åÈë
+    //æ’å…¥
     QMap<QString,QVariant> datas;
     datas.insert("id",1);
     datas.insert("name","'zxj'");
@@ -39,7 +39,7 @@ void TestDBManager::test_add()
 
 void TestDBManager::test_update()
 {
-    //¸üĞÂ
+    //æ›´æ–°
     QMap<QString,QVariant> udatas;
     udatas.insert("info","'changed information'");
 	Q_ASSERT_X(g_DBManager->update("test", udatas, "name='zxj'"), "update table", "faild");
@@ -47,7 +47,7 @@ void TestDBManager::test_update()
 
 void TestDBManager::test_query()
 {
-    //²éÑ¯
+    //æŸ¥è¯¢
     QStringList colums;
 	qDebug() << g_DBManager->query("test", colums);
     qDebug()<<colums;
@@ -55,13 +55,17 @@ void TestDBManager::test_query()
 
 void TestDBManager::test_remove()
 {
-    //É¾³ı
+    //åˆ é™¤
 	Q_ASSERT_X(g_DBManager->remove("test", "name='zxj'"), "delete table", "faild");
 }
 
 void TestDBManager::initTestCase()
 {
-	if (g_DBManager->open("orcl","scott", "zxj","localhost",1521)){
+    DBConfig conf;
+    conf.host = "localhost";
+    conf.dbName = "test.db";
+    g_DBManager->setConfig(conf);
+    if (g_DBManager->open()){
         qDebug()<<"database open success.";
     }else{
         qDebug()<<"database open fail.";

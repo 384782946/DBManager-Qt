@@ -7,3 +7,4 @@ win32/
 /Release
 /DBManager/Release
 /DBManager/Debug
+/DBManager/bin/*.pdb
