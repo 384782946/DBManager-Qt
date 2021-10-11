@@ -10,3 +10,4 @@ win32/
 /DBManager/Release
 /DBManager/Debug
 /DBManager/bin/*.pdb
+/*.user
