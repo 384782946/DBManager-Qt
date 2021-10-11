@@ -7,6 +7,7 @@
 message("You are running qmake on a generated .pro file. This may not work!")
 
 
-HEADERS += ./dbmanager.h \
-    ./dbmanager_global.h
-SOURCES += ./dbmanager.cpp
+HEADERS += $$PWD/dbmanager.h \
+    $$PWD/dbmanager_global.h
+
+SOURCES += $$PWD/dbmanager.cpp
