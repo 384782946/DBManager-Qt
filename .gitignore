@@ -1,5 +1,7 @@
 *.obj
 *.sdf
+.DS_Store
+*.pro.user
 win32/
 /*.suo
 /lib
